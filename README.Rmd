@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+
+# DiabetesPredictor
+
+## Overview
+
+**"DiabetesPredictor"** is a reproducible machine learning software package developed for the **BIO215 Capstone Project**. It encapsulates a pre-trained Random Forest classifier derived from **Kaggle: the BRFSS 2015 dataset** to predict diabetes risk based on clinical health indicators.
+
+## Features
+
+-   **Pre-trained Model**: Includes a high-performance Random Forest model (AUC \~).
+-   **Automated Preprocessing**: Automatically handles factor level mapping (e.g., converting numeric inputs like `1` to `Excellent` for General Health) to ensure robust inference.
+
+## Installation
+
+You can install the development version of DiabetesPredictor from [GitHub](https://github.com/) with:
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("conlinzyang/DiabetesPredictor")
+```
+
+## Usage Example
+
+This package comes with built-in example data to demonstrate the prediction workflow.
+
+```{r, eval = FALSE}
+library(DiabetesPredictor)
+
+# 1. Load the built-in sample data (first 10 rows of the dataset)
+# Using system.file to locate the data within the installed package
+data_path <- system.file("extdata", "sample.csv", package = "DiabetesPredictor")
+input_data <- read.csv(data_path)
+
+# Display raw input
+head(input_data, 3)
+
+# 2. Run Prediction
+# The function automatically sanitizes the input and loads the internal model
+predictions <- predict_diabetes(input_data)
+
+# 3. View Results
+print(predictions)
+```
+
+## Model Information
+
+-   **Algorithm**: Random Forest
+-   **Training Data**: CDC Behavioral Risk Factor Surveillance System (BRFSS) 2015 <https://www.kaggle.com/datasets/prosperchuks/health-dataset/data?select=diabetes_data.csv>.
+-   **Input Features**: HighChol, HighBP, DiffWalk, Age, GenHlth, BMI, HvyAlcoholConsump, CholCheck.
+
+## **Acknowledgements**
+
+-   **Xiaoyu Zhang**: Model Trainer
+-   **Zhicheng Yang**: Package Encapsulator

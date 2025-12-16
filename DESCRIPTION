@@ -1,0 +1,20 @@
+Package: DiabetesPredictor
+Title: Diabetes Risk Prediction Model Implementation
+Version: 0.1.0
+Authors@R: c(
+    person("Zhicheng", "Yang", email = "zhicheng.yang@student.xjtlu.edu.cn", role = c("aut", "cre"), 
+           comment = "Package Builder, Submitter"),
+    person("Xiaoyu", "Zhang", role = "aut", 
+           comment = "Model Trainer")
+  )
+Description: A reproducible software implementation for the BIO215 Capstone Project. 
+    This package encapsulates the pre-trained Random Forest classifier derived from the 
+    BRFSS 2015 dataset and provides standardized prediction functions. It is designed 
+    to ensure the reproducibility of the model inference logic used in the accompanying 
+    Shiny web application.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    randomForest
+RoxygenNote: 7.3.3
