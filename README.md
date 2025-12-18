@@ -12,7 +12,7 @@ indicators.
 ## Features
 
 - **Pre-trained Model**: Includes a high-performance Random Forest model
-  (AUC ~).
+  (AUC ~ 0.82).
 - **Automated Preprocessing**: Automatically handles factor level
   mapping (e.g., converting numeric inputs like `1` to `Excellent` for
   General Health) to ensure robust inference.
@@ -60,6 +60,17 @@ print(predictions)
 - **Input Features**: HighChol, HighBP, DiffWalk, Age, GenHlth, BMI,
   HvyAlcoholConsump, CholCheck.
 
+## Model Performance
+  
+The model's classification performance was evaluated using **ROC (Receiver Operating Characteristic)** and **PRC (Precision-Recall)** curves on the test set.
+  
+![ROC and PRC Curves](man/figures/roc_prc_plot.png)
+*(Figure: ROC curve achieving an AUC of 0.82, indicating strong discriminative ability. The PRC curve (AUC=0.79) further validates performance on the imbalanced dataset.)*
+  
+### Key Metrics
+* **AUC (Area Under Curve)**: 0.8196
+* **Optimal Cutoff**: 0.24 (Optimized for Recall)
+* **Sensitivity (Recall)**: 87.6%
 ## **Acknowledgements**
 
 - **Xiaoyu Zhang**: Model Trainer
