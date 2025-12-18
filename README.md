@@ -73,5 +73,5 @@ The model's classification performance was evaluated using **ROC (Receiver Opera
 * **Sensitivity (Recall)**: 87.6%
 ## **Acknowledgements**
 
-- **Xiaoyu Zhang**: Model Trainer
-- **Zhicheng Yang**: Package Encapsulator
+- **Xiaoyu Zhang**: Model Trainer, R Coding
+- **Zhicheng Yang**: Package Encapsulator, R coding
