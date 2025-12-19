@@ -17,6 +17,12 @@ indicators.
   mapping (e.g., converting numeric inputs like `1` to `Excellent` for
   General Health) to ensure robust inference.
 
+## Interactive Web Application
+
+Experience the model in action through our user-friendly Shiny interface. You can explore the dataset, visualize distributions, and perform real-time risk assessments.
+
+👉 **Live Demo:** [Launch DiabetesPredictor App](https://colinzhichengyang.shinyapps.io/DiabetesPredictor/)
+
 ## Installation
 
 You can install the development version of DiabetesPredictor from
