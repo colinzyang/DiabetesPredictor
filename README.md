@@ -24,7 +24,7 @@ You can install the development version of DiabetesPredictor from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("conlinzyang/DiabetesPredictor")
+devtools::install_github("colinzyang/DiabetesPredictor")
 ```
 
 ## Usage Example
