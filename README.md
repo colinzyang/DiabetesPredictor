@@ -21,7 +21,9 @@ indicators.
 
 Experience the model in action through our user-friendly Shiny interface. You can explore the dataset, visualize distributions, and perform real-time risk assessments.
 
-👉 **Live Demo:** [Launch DiabetesPredictor App](https://colinzhichengyang.shinyapps.io/DiabetesPredictor/)
+<img width="2865" height="1385" alt="image" src="https://github.com/user-attachments/assets/37a0403e-901a-4bde-9023-5847d6992050" />
+
+👉 **Live Demo:** [Launch DiabetesPredictor App](https://colinzhichengyang.shinyapps.io/bio215_DiabetesPredictor/)
 
 ## Installation
 
