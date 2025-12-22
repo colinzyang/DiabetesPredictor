@@ -1,32 +1,43 @@
 ---
+title: "DiabetesPredictor"
 output: github_document
 ---
 
-# DiabetesPredictor
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+DiabetesPredictor
+Overview
+“DiabetesPredictor” is a reproducible machine learning software package developed for the BIO215 Capstone Project. It encapsulates a pre-trained Random Forest classifier derived from Kaggle: the BRFSS 2015 dataset to predict diabetes risk based on clinical health indicators.
 
-## Overview
+Features
+Pre-trained Model: Includes a high-performance Random Forest model (AUC ~ 0.82).
 
-**"DiabetesPredictor"** is a reproducible machine learning software package developed for the **BIO215 Capstone Project**. It encapsulates a pre-trained Random Forest classifier derived from **Kaggle: the BRFSS 2015 dataset** to predict diabetes risk based on clinical health indicators.
+Automated Preprocessing: Automatically handles factor level mapping (e.g., converting numeric inputs like 1 to Excellent for General Health) to ensure robust inference.
 
-## Features
+Interactive Web Application
+Experience the model in action through our user-friendly Shiny interface. You can explore the dataset, visualize distributions, and perform real-time risk assessments.
 
--   **Pre-trained Model**: Includes a high-performance Random Forest model (AUC \~).
--   **Automated Preprocessing**: Automatically handles factor level mapping (e.g., converting numeric inputs like `1` to `Excellent` for General Health) to ensure robust inference.
+<img width="2865" height="1385" alt="image" src="https://github.com/user-attachments/assets/37a0403e-901a-4bde-9023-5847d6992050" />
 
-## Installation
+👉 Live Demo: Launch DiabetesPredictor App
 
-You can install the development version of DiabetesPredictor from [GitHub](https://github.com/) with:
+Installation
+You can install the development version of DiabetesPredictor from GitHub with:
 
-```{r, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("colinzyang/DiabetesPredictor")
+```{r, include = FALSE}
+# install package
+remotes::install_github("colinzyang/DiabetesPredictor")
 ```
 
-## Usage Example
-
+Usage Example
 This package comes with built-in example data to demonstrate the prediction workflow.
 
-```{r, eval = FALSE}
+```{r, include = FALSE}
 library(DiabetesPredictor)
 
 # 1. Load the built-in sample data (first 10 rows of the dataset)
@@ -45,13 +56,26 @@ predictions <- predict_diabetes(input_data)
 print(predictions)
 ```
 
-## Model Information
+Model Information
+Algorithm: Random Forest
 
--   **Algorithm**: Random Forest
--   **Training Data**: CDC Behavioral Risk Factor Surveillance System (BRFSS) 2015 <https://www.kaggle.com/datasets/prosperchuks/health-dataset/data?select=diabetes_data.csv>.
--   **Input Features**: HighChol, HighBP, DiffWalk, Age, GenHlth, BMI, HvyAlcoholConsump, CholCheck.
+Training Data: CDC Behavioral Risk Factor Surveillance System (BRFSS) 2015 https://www.kaggle.com/datasets/prosperchuks/health-dataset/data?select=diabetes_data.csv.
 
-## **Acknowledgements**
+Input Features: HighChol, HighBP, DiffWalk, Age, GenHlth, BMI, HvyAlcoholConsump, CholCheck.
 
--   **Xiaoyu Zhang**: Model Trainer
--   **Zhicheng Yang**: Package Encapsulator
+Model Performance
+The model's classification performance was evaluated using ROC (Receiver Operating Characteristic) and PRC (Precision-Recall) curves on the test set.
+
+(Figure: ROC curve achieving an AUC of 0.82, indicating strong discriminative ability. The PRC curve (AUC=0.79) further validates performance on the imbalanced dataset.)
+
+Key Metrics
+AUC (Area Under Curve): 0.8196
+
+Optimal Cutoff: 0.24 (Optimized for Recall)
+
+Sensitivity (Recall): 87.6%
+
+Acknowledgements
+Xiaoyu Zhang: Model Trainer, R Coding
+
+Zhicheng Yang: Package Encapsulator, R coding
